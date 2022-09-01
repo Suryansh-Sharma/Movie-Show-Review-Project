@@ -1,5 +1,7 @@
-# Movie-Show-Review-Project
-# Frontend project is present on React-Js branch.
+# Movie-Show-Review-Project.
+# Spring Framework / React Js.
+# Frontend project is present in React-Js branch.
+# Backend project is present in Spring-Boot-Branch.
 
 This is Full-Stack Application in Which user can watch show details,read comments,search show's without Login.Login User can comment on Show.
 user can update their profile picture,user password. Only User with ROLE ADMIN can add movies. 
