@@ -1,0 +1,51 @@
+{
+    "id": 21,
+    "name": "American Made",
+    "rating": 7,
+    "description":"The story of Barry Seal, an American pilot who became a drug-runner for the CIA in the 1980s in a clandestine operation that would be exposed as the Iran-Contra Affair.",
+    "time": "1H 55 M",
+    "type": "MOVIE",
+    "releaseDate": "17-08-2017",
+    "directorName": "Doug Liman",
+    "images": {
+        "id":21,
+        "coverImage": "AMM1",
+        "poster1": "AMM2",
+        "poster2": "AMM3",
+        "poster3": "AMM4"
+    },
+    "showCasts": [
+        {
+            "id":21,
+            "actorName": "Tom Cruise "
+        },
+        {
+            "id":21,
+            "actorName": "Domhnall Gleeson "
+        },
+        {
+            "id":21,
+            "actorName": "Jesse Plemons "
+        },
+        {
+            "id":21,
+            "actorName": "Caleb Landry Jones "
+        }
+    ],
+    "showGenre": [
+        {
+            "genreName": "Action",
+            "id": 21
+        },
+        {
+            "genreName": "Comedy",
+            "id": 21
+        },
+        {
+            "genreName": "Crime",
+            "id": 21
+        }
+    ]
+}
+
+

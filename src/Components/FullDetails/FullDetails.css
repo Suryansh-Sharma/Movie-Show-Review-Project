@@ -1,0 +1,253 @@
+.FullDetails{
+    position: relative;
+    margin-top: 7rem;
+    margin-bottom: 15rem;
+}
+.commentSection{
+    margin-top: 400px;
+}
+.FullDetails-title{
+    position: relative;
+    color: orange;
+    font-family: cursive;
+    left: 360px;
+    font-size: 40px;
+
+}
+.FullDetails-image{
+    position: relative;
+    max-width: 990px;
+    min-width: 990px;
+    min-height: 380px;
+    max-height: 380px;
+    left: 190px;
+    object-fit: fill;
+    margin-top: 3rem;
+}
+.des1{
+    top: 180px;
+    position: relative;
+    display: flex;
+    color: lightblue;
+    margin-bottom: 5rem;
+    left: 360px;
+    width: 750px;
+    font-size: 25px;
+}
+.type-heading{
+    position: relative;
+    left:360px;
+    top: 200px;
+    color: white;
+    font-size: 25px;
+    margin-bottom: 1px;
+}
+.type{
+    position: relative;
+    top: 200px;
+    left: 410px;
+    color: aqua;
+    font-size: 20px;
+    margin-bottom: 1px;
+    cursor: pointer;
+}
+.FullDetails-category{
+    position: relative;
+    top: 270px;
+    left: 360px;
+    margin-top: 20px;
+    display: flex;
+    width: 300px;
+}
+.cat1{
+    cursor: pointer;
+    background-color: lavender;
+    margin-right: 18px;
+    border-radius: 5px;
+    padding: 6px 19px 6px 19px;
+}
+.cat1:hover{
+    opacity: 0.8;
+}
+.Film-Credits{
+    position: relative;
+    top: 380px;
+}
+.Film-Credits-title{
+    color: white;
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    top: 320px;
+    font-family: cursive;
+    margin-bottom: 32px;
+}
+.Film-Credits-left{
+    position: relative;
+    top: 1px;
+    left: 360px;
+    margin-right: 1px;
+}
+.Film-Credits-img{
+    max-height: 450px;
+    min-height: 450px;
+    max-width: 300px;
+    min-width: 300px;
+}
+.Film-Credits-img:hover{
+    opacity: 0.8;
+}
+.date{
+    position: relative;
+    top: 350px;
+    left: -298px;
+    color: white;
+    margin-left: 1px;
+
+
+    clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.duration{
+    position: relative;
+    top: 280px;
+    left: -550px;
+    color: white;
+
+    clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.rating{
+    position: relative;
+    left: -380px;
+    top: 320px;
+    color: gold;
+    font-size: 20px;
+
+    clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+.Film-Credits-right{
+    position: relative;
+    flex-direction: column;
+    top: -455px;
+    left: 760px;
+    display: block;
+    width: 400px;
+}
+.Film-Credits-right-cast{
+    color: white;
+    margin-bottom: 12px;
+}
+.cast{
+    cursor: pointer;
+    margin-bottom: 18px;
+    border-radius: 5px;
+    width: 162px;
+    display: flex;
+    font-size: 17px;
+    color: #b69efe;
+    padding: 6px 19px 6px 1px;
+}
+.director{
+    color: white;
+    margin-bottom: 12px;
+    
+}
+.d-name{
+    width: 162px;
+    cursor: pointer;
+    font-size: 17px;
+    color: #b69efe;
+    display: flex;
+}
+@media screen and (max-width:480px) {
+    .FullDetails-title{
+        position: relative;
+        left: 20px;
+    }   
+
+    .Film-Credits-title{
+        top: 320px;
+    }
+
+    .FullDetails-image{
+        left: -40px;
+        max-width: 380px;
+        min-width: 380px;
+        max-height: 120px;
+        min-height: 120px;
+    }
+    .des1{
+        left: -10px;
+        width: 320px;
+    }
+    .type-heading{
+        left: -10px;
+    }
+    .type{
+        left: -10px;
+    }
+    .FullDetails-category{
+        flex-direction: column;
+        left: -12px;
+
+    }
+    .cat1{
+        margin-top: 12px;
+    }
+    .Film-Credits{
+        left: -390px;
+    }
+    .Film-Credits-img{
+        min-width: 200px;
+        max-width: 200px;
+    }
+    .duration{
+        top: 1px;
+        left: -1px;
+    }
+    .rating{
+        top: 72px;
+        left: -1px;
+    }
+    .date{
+        top: 380px;
+        left: -200px;
+    }
+    .Film-Credits-right-cast{
+        position: relative;
+        left: -180px;
+    }
+    .cast{
+        position: relative;
+        left: -180px;
+        display: flexbox;
+        flex-direction: column;
+    }
+    .director{
+        position: relative;
+        left: -180px;
+    }
+    .d-name{
+        position: relative;
+        left: -180px;
+        display: flexbox;
+        flex-direction: column;
+        
+    }
+}
+@media screen and (max-width:395px){
+    .FullDetails-image{
+        position: relative;
+        left: -62px;
+        padding: 8px;
+    }
+}
