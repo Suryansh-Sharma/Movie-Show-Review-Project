@@ -1,0 +1,44 @@
+{
+  "cartItems": [
+    {
+      "id": 40,
+      "userId": 3,
+      "quantity":8,
+      "product": {
+        "id": 9,
+        "color": "Grey",
+        "name": "Logitech Wireless Keyboard",
+        "imageUrl": "https://cdn.moglix.com/p/I/Q/M/d/MINIQMODIJ8B3-xxlarge.jpg",
+        "price": 100,
+        "description": "Try this new Keyboard"
+      }
+    },
+    {
+      "id": 21,
+      "userId": 3,
+      "quantity":1,
+      "product": {
+        "id": 4,
+        "color": "Grey",
+        "name": "Logitech Wireless Mouse",
+        "imageUrl": "https://resource.logitech.com/content/dam/logitech/en/products/mice/m171/gallery/m171-gallery-grey-1.png",
+        "price": 50,
+        "description": "Try this new Mouse"
+      }
+    },
+    {
+      "id": 22,
+      "userId": 3,
+      "quantity":4,
+      "product": {
+        "id": 4,
+        "color": "Black",
+        "name": "Logitech Wireless Mouse",
+        "imageUrl": "https://resource.logitech.com/content/dam/gaming/en/products/pro-wireless-gaming-mouse/pro-wireless-carbon-gallery-1.png",
+        "price": 50,
+        "description": "Try this new Mouse"
+      }
+    }
+  ],
+  "GrandTotal": 200
+}

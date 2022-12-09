@@ -1,36 +1,41 @@
 import React from 'react';
-import { useState,useEffect } from "react";
+import {useState, useEffect} from "react";
 import "./SearchBar.css";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
-function SearchBar(props) {
-        const [value, setValue] = useState("");
-        const [data,setData] = useState([]);
-        let navigate = useNavigate();
-        useEffect(() => {
-            axios.get(`http://localhost:8080/shows/allShowsName`)
-            .then(response=>{
-                setData(response.data);
-            })
-            .catch(err=>{
-                console.log(err);
-            })
-          }, []);
+import {useNavigate} from "react-router-dom";
 
-        const onChange = (event) => {
-            setValue(event.target.value);
-        };
-        
-        const onSearch = (searchTerm) => {
-            navigate("/show/" + searchTerm);
-        };
+function SearchBar(props) {
+    const [value, setValue] = useState("");
+    const [data, setData] = useState([
+        {full_name:"Apple IPhone 14 Pro Max "},
+        {full_name:"Apple Watch Ultra"},
+        {full_name:"Amazon Fire TV Stick"},
+    ]);
+    let navigate = useNavigate();
+    useEffect(() => {
+        // axios.get(`http://localhost:8080/shows/allShowsName`)
+        //     .then(response => {
+        //         setData(response.data);
+        //     })
+        //     .catch(err => {
+        //         console.log(err);
+        //     })
+    }, []);
+
+    const onChange = (event) => {
+        setValue(event.target.value);
+    };
+
+    const onSearch = (searchTerm) => {
+        navigate("/product/" + searchTerm);
+    };
 
     return (
         <div className="Search">
             <div className="search-container">
                 <div className="search-inner">
-                    <input type="text" value={value} onChange={onChange} />
-                    <button className="button" onClick={() => onSearch(value)}> Search </button>
+                    <input type="text" value={value} onChange={onChange} placeholder={"Search Products Here ."}/>
+                    <button className="button" onClick={() => onSearch(value)}> Search</button>
                 </div>
                 <div className="dropdown">
                     {data
@@ -40,7 +45,7 @@ function SearchBar(props) {
 
                             return (
                                 searchTerm &&
-                                fullName.startsWith(searchTerm) &&
+                                fullName.includes(searchTerm) &&
                                 fullName !== searchTerm
                             );
                         })

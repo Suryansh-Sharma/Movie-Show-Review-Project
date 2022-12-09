@@ -5,26 +5,22 @@ import { BrowserRouter as Router, Routes, Route, Switch} from "react-router-dom"
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Slides from "./Components/Slides/Slides";
 import NavigationBar from "./Components/NavigationBar/NavigationBar";
-import Top10Movies from "./Components/TopMovies/Top10Movies";
-import AllCategories from './Components/Categories/Card';
 import Footer from "./Components/Footer/Footer";
 import SearchBar from "./Components/SearchBar/SearchBar";
-import Movie from "./Components/Movie/Movie";
-import FullDetail from "./Components/FullDetails/FullDetail";
-import Upload from "./Components/UploadShow/Upload";
-import Comments from "./Components/CommentsSection/Comments";
 import Login from './Components/Security/Login';
 import LoginContext from './context/loginContext';
 import PrivateRouter from './Components/Security/PrivateRouter';
 import PrivateLogin from './Components/Security/PrivateLogin';
 import SignUp from './Components/Security/SignUp';
-import NewMapApi from './Components/NewsSection/NewMapApi';
 import PageNotFound from './Components/Exception/PageNotFound';
 import Profile from './Components/Security/Profile';
+import LandingPage from './Components/LandingPage/LandingPage'
 import PrivateProfileRoute from './Components/Security/PrivateProfileRoute';
 import { ToastContainer} from 'react-toastify';
+import AllProduct from "./Components/Allproduct/AllProduct";
+import Product from './Components/Product/Product';
+import Cart from './Components/Cart/Cart';
 function App() {
   
   return (
@@ -37,16 +33,16 @@ function App() {
       }}>
         <ToastContainer/>
         <Router>
-        
         <NavigationBar  />
+        <SearchBar/>
             <Routes>
-                <Route path={"/*"} element={<><Slides/><Top10Movies/><NewMapApi/></>}/>
-                <Route path={"comments"} element={<Comments/>}/>
+              
+                <Route path={"/"} element={<LandingPage/>}/>
                 <Route path={"error404"} element={<PageNotFound/>}/>
-                <Route path="search" element={<SearchBar/>} />
-                <Route path="categories" element={<AllCategories/>}/>
-                <Route path="movie/:path/:id/:title" element={<Movie/>} />
-                <Route path="show/:id" element={<FullDetail /> }/>
+                <Route path={"allProduct"} element={<AllProduct/>}/>
+                <Route path={"cart"} element={<Cart/>}/>
+                <Route path={"product"} element={<Product/>}/>  
+                <Route path={"search"} element={<SearchBar/>} />
                 <Route path="profile/:userName" element={
                   <PrivateProfileRoute>
                   <Profile/>
@@ -62,15 +58,14 @@ function App() {
                     <SignUp/>
                   </PrivateLogin>
                 } />
-                <Route path={"/uploadShow"} element={
+                {/* <Route path={"/uploadShow"} element={
                 <PrivateRouter>
                   <Upload/>
                 </PrivateRouter>
                 
-                }/>
+                }/> */}
 
             </Routes>
-            <Footer/>
         </Router>
         </LoginContext.Provider>
       </div>

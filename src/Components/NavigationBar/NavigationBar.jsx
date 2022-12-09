@@ -1,8 +1,10 @@
 import { React,useState,useContext , useEffect} from 'react'
 import {useNavigate, useParams} from "react-router-dom";
 import "./Navbar.css";
-import titleLogo from "../../icons/movie.png";
+import titleLogo from "../../icons/logo.png";
 import LoginContext from '../../context/loginContext';
+import cart from "../../icons/cart.png";
+import account from "../../icons/account.png";
 
 const Navigation = () => {
 
@@ -43,26 +45,33 @@ const Navigation = () => {
                         <li className="nav-item">
                             <a className="nav-link" onClick={()=>{
                                 navigate("/search")
-                            }} >Search Movies & Show </a>
+                            }} ></a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" onClick={()=>navigate("/") }>Home Appliances</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" onClick={()=>navigate("/") }>Camera</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" onClick={()=>navigate("/") }>All categories</a>
                         </li>
                     </ul>
                     <ul className="navbar-nav ml-auto">
+
                         <li className="nav-item">
-                            <a className="nav-link" onClick={()=>navigate("/") }>Home Page</a>
+                            <a className="nav-link"  onClick={()=>{navigate("/categories")}}>Search</a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link"  onClick={()=>{navigate("/categories")}}>Categories</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" onClick={()=>navigate("/movie/" +"getShowsByType/"+ "MOVIE"+ "/"+"MOVIE") }>Movies</a>
+                        <li className="nav-item ">
+                            {/* <a className="nav-link" onClick={()=>navigate("/movie/" +"getShowsByType/"+ "MOVIE"+ "/"+"MOVIE") }>Movies</a> */}
+                            <img src={account} className={"nav-account"} onClick={()=>{navigate("/")}}></img>
+                        
                         </li>
 
-                        {(auth.status)? 
                         <li className="nav-item profile">
-                            <a className="nav-link" onClick={()=>navigate("/profile/" + auth.userName)}>{auth.userName}</a>
+                            {/* <a className="nav-link" onClick={()=>navigate("/profile/" + auth.userName)}>{auth.userName}</a> */}
+                            <img src={cart} className={"nav-cart"} onClick={()=>{navigate("/")}}></img>
                         </li> 
-                        :null    
-                        }
                         <button className={"btn"} onClick={handleLogin}>
                         {
                             (auth.status)?

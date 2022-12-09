@@ -24,9 +24,9 @@ function SignUp() {
     event.preventDefault();
     if (!data.userEmail.includes("@") || data.email === "") {
       alert("Not valid email.");
-    } else if (data.userName.length == 0) {
+    } else if (data.userName.length === 0) {
       alert("User Name is empty");
-    } else if (data.userFirstName.length == 0) {
+    } else if (data.userFirstName.length === 0) {
       alert("First Name is empty");
     } else if (data.userLastName.length === 0) {
       alert("Last Name is empty");
